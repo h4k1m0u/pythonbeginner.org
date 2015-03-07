@@ -102,6 +102,9 @@ add_action( 'widgets_init', 'freebsdbeginner_widgets_init' );
 function freebsdbeginner_scripts() {
 	wp_enqueue_style( 'freebsdbeginner-style', get_stylesheet_uri() );
 
+    // h4k1m: add layout css
+    wp_enqueue_style( 'freebsdbeginner-style-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css');
+
     // h4k1m: add fonts
     wp_enqueue_style( 'freebsdbeginner-google-fonts', 'http://fonts.googleapis.com/css?family=Inconsolata:400,700');
 

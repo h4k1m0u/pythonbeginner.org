@@ -3,20 +3,22 @@ Theme Name: freebsdbeginner
 Layout: Content-Sidebar
 */
 
-.content-area {
-	float: left;
-	margin: 0 -25% 0 0;
-	width: 100%;
+#page {
+    background: #272822;
 }
-.site-main {
-	margin: 0 25% 0 0;
+.site-content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.site-content .content-area {
+    float: right;
+    width: 100%;
+    margin-left: -300px;
+    padding-left: 300px;
 }
 .site-content .widget-area {
-	float: right;
-	overflow: hidden;
-	width: 25%;
-}
-.site-footer {
-	clear: both;
-	width: 100%;
+    float: left;
+    width: 300px;
 }
