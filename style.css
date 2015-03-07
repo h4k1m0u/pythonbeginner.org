@@ -43,6 +43,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.2 Galleries
 --------------------------------------------------------------*/
 
+/* Author: h4k1m */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+13.0 Header
+    13.1 Menu
+
+
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
@@ -283,6 +291,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+    color: #ccc;
 }
 
 p {
@@ -494,17 +503,19 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #999;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: #999;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #fff;
 }
 
 a:focus {
@@ -520,10 +531,11 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
+    overflow: hidden;
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	width: 75%;
+    margin: 0 auto;
 }
 
 .main-navigation ul {
@@ -535,11 +547,13 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+    line-height: 3em;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+    padding: 0 1em;
 }
 
 .main-navigation ul ul {
@@ -561,10 +575,27 @@ a:active {
 }
 
 .main-navigation ul ul li {
+}
 
+.main-navigation li:hover {
 }
 
 .main-navigation li:hover > a {
+    background: #666;
+    color: #fff;
+}
+
+.main-navigation li:first-child > a {
+    width: 300px;
+    text-align: center;
+    font-size: 2em;
+    color: #060;
+    background: #98cd00;
+}
+
+.main-navigation li:first-child > a:hover {
+    color: #98cd00;
+    background: #060;
 }
 
 .main-navigation ul ul :hover > a {
@@ -581,9 +612,16 @@ a:active {
 	left: 100%;
 }
 
+.main-navigation .current_page_item,
+.main-navigation .current-menu-item,
+.main-navigation .current_page_ancestor {
+    background: #666;
+}
+
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a {
+    color: #fff;
 }
 
 /* Small menu. */
@@ -882,3 +920,16 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+13.0 Header
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+13.1 Menu
+--------------------------------------------------------------*/
+.site-header .menu-container {
+    margin-bottom: 1em;
+    background: #333;
+    border-bottom: 2px solid #ccc;
+}
+

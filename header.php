@@ -27,10 +27,17 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'freebsdbeginner' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+        <div class="menu-container">
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                <button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'freebsdbeginner' ); ?></button>
+                <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'after'          => '<li class="menu-item-separator">|</li>',
+                    ));
+                ?>
+            </nav><!-- #site-navigation -->
+        </div><!-- .menu-container -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
