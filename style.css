@@ -49,11 +49,28 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ----------------------------------------------------------------
 13.0 Header
     13.1 Menu
+    13.2 Branding
+14.0 Content
+    14.1 Content Area
+    14.2 Widget Area
+15.0 Footer
 
 
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
+::selection {
+    /* WebKit/Blink Browsers */
+    background: #4F5145;
+    color: #fff;
+}
+
+::-moz-selection {
+    /* Gecko Browsers */
+    background: #4F5145;
+    color: #fff;
+}
+
 html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
@@ -278,7 +295,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #4f5145;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -503,19 +520,22 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: #999;
+    background: #1A1A16;
+	color: #4f5145;
     font-weight: bold;
     text-decoration: none;
 }
 
 a:visited {
-	color: #999;
+    background: #1A1A16;
+	color: #4f5145;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #fff;
+    background: #4f5145;
+    color: #fff;
 }
 
 a:focus {
@@ -534,8 +554,9 @@ a:active {
     overflow: hidden;
 	clear: both;
 	display: block;
-	width: 75%;
-    margin: 0 auto;
+    background: #1a1a16;
+    border-bottom: 1px solid #4f5145;
+    border-top: 1px solid #4f5145;
 }
 
 .main-navigation ul {
@@ -552,8 +573,9 @@ a:active {
 
 .main-navigation a {
 	display: block;
-	text-decoration: none;
     padding: 0 1em;
+	text-decoration: none;
+    font-size: 1.2em;
 }
 
 .main-navigation ul ul {
@@ -581,21 +603,21 @@ a:active {
 }
 
 .main-navigation li:hover > a {
-    background: #666;
-    color: #fff;
+}
+
+.main-navigation li:first-child {
 }
 
 .main-navigation li:first-child > a {
     width: 300px;
     text-align: center;
     font-size: 2em;
-    color: #060;
+    color: #6a8f00;
     background: #98cd00;
 }
 
 .main-navigation li:first-child > a:hover {
-    color: #98cd00;
-    background: #060;
+    color: #bdff01;
 }
 
 .main-navigation ul ul :hover > a {
@@ -612,15 +634,10 @@ a:active {
 	left: 100%;
 }
 
-.main-navigation .current_page_item,
-.main-navigation .current-menu-item,
-.main-navigation .current_page_ancestor {
-    background: #666;
-}
-
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a {
+    background: #4f5145;
     color: #fff;
 }
 
@@ -751,6 +768,10 @@ a:active {
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
+}
+
+.widget h1 {
+    font-size: 1.2em;
 }
 
 /* Make sure select elements fit in widgets. */
@@ -925,11 +946,67 @@ object {
 13.0 Header
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-13.1 Menu
+13.1 Branding
 --------------------------------------------------------------*/
-.site-header .menu-container {
-    margin-bottom: 1em;
-    background: #333;
-    border-bottom: 2px solid #ccc;
+.site-branding {
 }
 
+.site-branding h1 {
+    margin: 0;
+}
+
+.site-title a {
+    color: #6a8f00;
+    background: transparent;
+}
+
+.site-title a:hover {
+    color: #98cd00;
+    background: transparent;
+}
+
+/*--------------------------------------------------------------
+13.2 Menu
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+14.0 Content
+--------------------------------------------------------------*/
+.site-content {
+}
+
+/*--------------------------------------------------------------
+14.1 Content Area
+--------------------------------------------------------------*/
+.content-area h1,
+.content-area h2,
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
+    color: #98cd00;
+}
+
+/*--------------------------------------------------------------
+14.2 Widget Area
+--------------------------------------------------------------*/
+.widget-area {
+    border-right: 1px solid #4f5145;
+}
+
+.widget-area h1,
+.widget-area h2,
+.widget-area h3,
+.widget-area h4,
+.widget-area h5,
+.widget-area h6 {
+    color: #6a8f00;
+}
+
+/*--------------------------------------------------------------
+15.0 Footer
+--------------------------------------------------------------*/
+.site-footer {
+    text-align: center;
+    border-top: 1px solid #4f5145;
+}
