@@ -308,7 +308,16 @@ h4,
 h5,
 h6 {
 	clear: both;
-    color: #ccc;
+    color: #6a8f00;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #98CD00;
 }
 
 p {
@@ -978,29 +987,12 @@ object {
 /*--------------------------------------------------------------
 14.1 Content Area
 --------------------------------------------------------------*/
-.content-area h1,
-.content-area h2,
-.content-area h3,
-.content-area h4,
-.content-area h5,
-.content-area h6 {
-    color: #98cd00;
-}
 
 /*--------------------------------------------------------------
 14.2 Widget Area
 --------------------------------------------------------------*/
 .widget-area {
     border-right: 1px solid #4f5145;
-}
-
-.widget-area h1,
-.widget-area h2,
-.widget-area h3,
-.widget-area h4,
-.widget-area h5,
-.widget-area h6 {
-    color: #6a8f00;
 }
 
 /*--------------------------------------------------------------
