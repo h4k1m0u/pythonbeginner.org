@@ -18,7 +18,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="wrapper">
     <div id="page" class="hfeed site">
         <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'freebsdbeginner' ); ?></a>
 
@@ -32,7 +31,6 @@
                 <?php
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
-                        //'after'          => '<li class="menu-item-separator"></li>',
                     ));
                 ?>
             </nav><!-- #site-navigation -->

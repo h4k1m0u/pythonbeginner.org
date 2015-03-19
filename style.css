@@ -387,7 +387,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+    background: #4F5145;
 }
 
 blockquote:before,
@@ -774,16 +774,15 @@ a:active {
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-    border-bottom: 1px solid #4F5145;
 	padding: 0.5em;
-}
-
-.widget:nth-child(2n) {
     background: #1A1A16;
+    border-top: 1px solid #4F5145;
+    border-left: 1px solid #4F5145;
+    border-right: 1px solid #4F5145;
 }
 
 .widget:last-child {
-    border: none;
+    border-bottom: 1px solid #4F5145;
 }
 
 .widget h1 {
@@ -989,14 +988,11 @@ object {
     padding: 1em;
 }
 
-.widget-area {
-    border-right: 1px solid #4f5145;
-}
-
 /*--------------------------------------------------------------
 15.0 Footer
 --------------------------------------------------------------*/
 .site-footer {
     text-align: center;
     border-top: 1px solid #4f5145;
+    background: #1A1A16;
 }
