@@ -1,22 +1,24 @@
 /*
 Theme Name: freebsdbeginner
-Layout: Sidebar-Content
+Layout: Content-Sidebar
 */
 
-.content-area {
-	float: right;
-	margin: 0 0 0 -25%;
-	width: 100%;
+#wrapper {
+    background: #4F5145;
 }
-.site-main {
-	margin: 0 0 0 25%;
+#page {
+    width: 75%;
+    margin: 0 auto;
+    background: #272822;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.site-content .content-area {
+    float: right;
+    width: 100%;
+    margin-left: -300px;
+    padding-left: 300px;
 }
 .site-content .widget-area {
-	float: left;
-	overflow: hidden;
-	width: 25%;
-}
-.site-footer {
-	clear: both;
-	width: 100%;
+    float: left;
+    width: 300px;
 }
