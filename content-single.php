@@ -11,6 +11,7 @@
 		<div class="entry-meta">
 			<?php freebsdbeginner_posted_on(); ?>
 		</div><!-- .entry-meta -->
+        <hr/>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

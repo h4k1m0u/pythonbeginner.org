@@ -313,6 +313,15 @@ h6 {
     color: #6a8f00;
 }
 
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+    font-weight: normal
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -399,7 +408,7 @@ q {
 }
 
 hr {
-	background-color: #ccc;
+	background-color: #4F5145;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -1010,6 +1019,7 @@ object {
 .category .page-header > h1 {
     line-height: 3em;
 }
+
 .category article {
     border-bottom: 1px solid #4F5145;
 }
@@ -1021,12 +1031,31 @@ object {
 .category .entry-header h1 a {
     color: #6a8f00;
     background: transparent;
-    font-weight: normal;
 }
+
 .category .entry-header h1 a:hover {
     color: #98CD00;
+}
+
+.category .entry-meta {
+    font-size: 0.7em;
 }
 
 /*--------------------------------------------------------------
 17.0 Single
 --------------------------------------------------------------*/
+.single .entry-header > h1 {
+    line-height: 3em;
+}
+
+.single .entry-meta {
+    font-size: 0.7em;
+}
+
+.single .nav-links .nav-previous a:before {
+    content: "<< ";
+}
+
+.single .nav-links .nav-next a:after {
+    content: " >>";
+}

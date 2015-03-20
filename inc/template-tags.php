@@ -37,13 +37,14 @@ function the_posts_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'the_post_navigation' ) ) :
+if ( ! function_exists( 'freebsdbeginner_post_navigation' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
+ * @author h4k1m
  */
-function the_post_navigation() {
+function freebsdbeginner_post_navigation() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -52,6 +53,7 @@ function the_post_navigation() {
 		return;
 	}
 	?>
+    <hr/>
 	<nav class="navigation post-navigation" role="navigation">
 		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'freebsdbeginner' ); ?></h2>
 		<div class="nav-links">
@@ -87,12 +89,13 @@ function freebsdbeginner_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$byline = sprintf(
+    // h4k1m: hide author link
+	/*$byline = sprintf(
 		_x( 'by %s', 'post author', 'freebsdbeginner' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+    );*/
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span>'; //<span class="byline"> ' . $byline . '</span>';
 
 }
 endif;
