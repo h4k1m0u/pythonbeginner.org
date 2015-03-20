@@ -13,7 +13,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
 			<header class="page-header">
                 <h1 class="page-title"><?php single_cat_title(); ?></h1>
 			</header><!-- .page-header -->
@@ -34,9 +33,11 @@ get_header(); ?>
 			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
+			<header class="page-header">
+                <h1 class="page-title"><?php single_cat_title(); ?></h1>
+			</header><!-- .page-header -->
 
-			<?php get_template_part( 'content', 'none' ); ?>
-
+			<?php echo 'No post found.'; ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
