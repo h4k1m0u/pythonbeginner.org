@@ -578,6 +578,20 @@ a:active {
     line-height: 3em;
 }
 
+.main-navigation li:last-child {
+    float: right;
+}
+
+.main-navigation li:last-child > a {
+    background: #4f5145;
+    color: #1A1A16;
+    font-size: 1em;
+}
+
+.main-navigation li:last-child > a:hover {
+    color: #fff;
+}
+
 .main-navigation a {
 	display: block;
     padding: 0 1em;
