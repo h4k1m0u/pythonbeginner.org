@@ -53,6 +53,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 15.0 Footer
 
 16.0 Category
+17.0 Single
 
 
 /*--------------------------------------------------------------
@@ -306,17 +307,10 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: "Droid Sans Mono";
+    font-weight: normal;
 	clear: both;
     color: #6a8f00;
-}
-
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover,
-h6:hover {
-    color: #98CD00;
 }
 
 p {
@@ -993,7 +987,7 @@ object {
 14.0 Content
 --------------------------------------------------------------*/
 .content-area .site-main {
-    padding: 1em;
+    padding: 0 1em 1em 1em;
 }
 
 .site-content .widget-area {
@@ -1009,13 +1003,30 @@ object {
     border-top: 1px solid #4f5145;
     background: #1A1A16;
 }
+
 /*--------------------------------------------------------------
 16.0 Category
 --------------------------------------------------------------*/
+.category .page-header > h1 {
+    line-height: 3em;
+}
 .category article {
     border-bottom: 1px solid #4F5145;
 }
 
-.category article h1 {
+.category .entry-header h1 {
     font-size: 1.2em;
 }
+
+.category .entry-header h1 a {
+    color: #6a8f00;
+    background: transparent;
+    font-weight: normal;
+}
+.category .entry-header h1 a:hover {
+    color: #98CD00;
+}
+
+/*--------------------------------------------------------------
+17.0 Single
+--------------------------------------------------------------*/
