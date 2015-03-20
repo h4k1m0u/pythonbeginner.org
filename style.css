@@ -93,6 +93,10 @@ summary {
 	display: block;
 }
 
+article h1 {
+    font-size: 1.2em;
+}
+
 audio,
 canvas,
 progress,
