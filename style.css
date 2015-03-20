@@ -791,14 +791,6 @@ a:active {
 --------------------------------------------------------------*/
 .widget {
 	padding: 0.5em;
-    background: #1A1A16;
-    border-top: 1px solid #4F5145;
-    border-left: 1px solid #4F5145;
-    border-right: 1px solid #4F5145;
-}
-
-.widget:last-child {
-    border-bottom: 1px solid #4F5145;
 }
 
 .widget h1 {
@@ -1002,6 +994,11 @@ object {
 --------------------------------------------------------------*/
 .content-area .site-main {
     padding: 1em;
+}
+
+.site-content .widget-area {
+    background: #1A1A16;
+    border-right: 1px solid #4F5145;
 }
 
 /*--------------------------------------------------------------
