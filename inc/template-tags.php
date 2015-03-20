@@ -123,7 +123,8 @@ function freebsdbeginner_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'freebsdbeginner' ), '<span class="edit-link">', '</span>' );
+    // h4k1m: hide edit post link
+	// edit_post_link( __( 'Edit', 'freebsdbeginner' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 

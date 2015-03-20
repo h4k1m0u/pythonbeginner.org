@@ -52,6 +52,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 14.0 Content
 15.0 Footer
 
+16.0 Category
+
 
 /*--------------------------------------------------------------
 1.0 Normalize
@@ -91,10 +93,6 @@ nav,
 section,
 summary {
 	display: block;
-}
-
-article h1 {
-    font-size: 1.2em;
 }
 
 audio,
@@ -139,7 +137,7 @@ dfn {
 
 h1 {
 	font-size: 2em;
-	margin: 0;
+    margin: 0.2em 0;
 }
 
 mark {
@@ -1013,4 +1011,14 @@ object {
     text-align: center;
     border-top: 1px solid #4f5145;
     background: #1A1A16;
+}
+/*--------------------------------------------------------------
+16.0 Category
+--------------------------------------------------------------*/
+.category article {
+    border-bottom: 1px solid #4F5145;
+}
+
+.category article h1 {
+    font-size: 1.2em;
 }
