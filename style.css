@@ -794,6 +794,11 @@ a:active {
 --------------------------------------------------------------*/
 .widget {
 	padding: 0.5em;
+    border-bottom: 1px solid #4F5145;
+}
+
+.widget:last-child {
+    border: none;
 }
 
 .widget h1 {
