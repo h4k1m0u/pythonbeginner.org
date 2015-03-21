@@ -6,6 +6,7 @@ Layout: Sidebar-Content
 #page {
     width: 75%;
     margin: 0 auto;
+    color: #4F5145;
     background: #272822;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }

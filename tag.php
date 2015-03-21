@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying category pages.
+ * The template for displaying tag pages.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="page-header">
-                <h1 class="page-title">Category "<?php single_cat_title(); ?>"</h1>
+                <h1 class="page-title">Tag "<?php single_tag_title(); ?>"</h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -34,7 +34,7 @@ get_header(); ?>
 
 		<?php else : ?>
 			<header class="page-header">
-                <h1 class="page-title">Category "<?php single_cat_title(); ?>"</h1>
+                <h1 class="page-title">Tag "<?php single_tag_title(); ?>"</h1>
 			</header><!-- .page-header -->
 
 			<?php echo 'No post found.'; ?>

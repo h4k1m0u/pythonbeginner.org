@@ -52,7 +52,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 14.0 Content
 15.0 Footer
 
-16.0 Category
+16.0 Category & Tag
 17.0 Single
 
 
@@ -72,11 +72,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 
 html {
+    height: 100%;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
 
 body {
+    height: 100%;
     font-family: Inconsolata, sans-serif;
 	margin: 0;
 }
@@ -1019,30 +1021,30 @@ object {
 }
 
 /*--------------------------------------------------------------
-16.0 Category
+16.0 Category & Tag
 --------------------------------------------------------------*/
-.category .page-header > h1 {
+.category .page-header > h1, .tag .page-header > h1 {
     margin: 1em 0;
 }
 
-.category article {
+.category article, .tag article {
     border-bottom: 1px solid #4F5145;
 }
 
-.category .entry-header h1 {
+.category .entry-header h1, .tag .entry-header h1 {
     font-size: 1.2em;
 }
 
-.category .entry-header h1 a {
+.category .entry-header h1 a, .tag .entry-header h1 a {
     color: #6a8f00;
     background: transparent;
 }
 
-.category .entry-header h1 a:hover {
+.category .entry-header h1 a:hover, .tag .entry-header h1 a:hover {
     color: #98CD00;
 }
 
-.category .entry-meta {
+.category .entry-meta, .tag .entry-meta {
     font-size: 0.7em;
 }
 
