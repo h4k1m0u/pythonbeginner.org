@@ -1017,7 +1017,7 @@ object {
 16.0 Category
 --------------------------------------------------------------*/
 .category .page-header > h1 {
-    line-height: 3em;
+    margin: 1em 0;
 }
 
 .category article {
@@ -1045,7 +1045,7 @@ object {
 17.0 Single
 --------------------------------------------------------------*/
 .single .entry-header > h1 {
-    line-height: 3em;
+    margin-top: 1em;
 }
 
 .single .entry-meta {
