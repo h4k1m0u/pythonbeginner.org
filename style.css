@@ -509,8 +509,9 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: #1A1A16;
+    background: #4F5145;
+	border: 1px solid #1A1A16;
 	border-radius: 3px;
 }
 
@@ -872,6 +873,13 @@ a:active {
 /*--------------------------------------------------------------
 10.3 Comments
 --------------------------------------------------------------*/
+.comments-area {
+    padding: 0.5em;
+    background: #fff;
+    border: 1px solid #1A1A16;
+    border-radius: 5px;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
