@@ -189,6 +189,14 @@ pre {
 	overflow: auto;
 }
 
+p code {
+    padding: 0.1em;
+    color: #1a1a16;
+    background: #4f5145;
+    border: 1px solid #1a1a16;
+    border-radius: 5px;
+}
+
 code,
 kbd,
 pre,
@@ -353,6 +361,7 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+    border-radius: 5px;
 }
 
 code,
