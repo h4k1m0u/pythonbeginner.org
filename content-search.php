@@ -20,7 +20,8 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
+		<?php the_content('Read more...');
+		?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">

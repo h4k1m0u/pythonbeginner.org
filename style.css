@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 7.0 Alignments
 8.0 Clearings
 9.0 Widgets
+    9.1 Search Form
 10.0 Content
 	10.1 Posts and pages
 	10.2 Asides
@@ -52,7 +53,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 14.0 Content
 15.0 Footer
 
-16.0 Category & Tag
+16.0 Category & Tag & Search
 17.0 Single
 18.0 Front Page
 
@@ -829,6 +830,13 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+9.1 Search Form
+--------------------------------------------------------------*/
+.search-form input {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1043,30 +1051,32 @@ object {
 }
 
 /*--------------------------------------------------------------
-16.0 Category & Tag
+16.0 Category & Tag & Search
 --------------------------------------------------------------*/
-.category .page-header > h1, .tag .page-header > h1 {
+.category .page-header > h1, .tag .page-header > h1, .search .page-header > h1 {
     margin: 1em 0;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-.category article, .tag article {
+.category article, .tag article, .search article {
     border-bottom: 1px solid #4F5145;
 }
 
-.category .entry-header h1, .tag .entry-header h1 {
+.category .entry-header h1, .tag .entry-header h1, .search .entry-header h1 {
     font-size: 1.2em;
 }
 
-.category .entry-header h1 a, .tag .entry-header h1 a {
+.category .entry-header h1 a, .tag .entry-header h1 a, .search .entry-header h1 a {
     color: #6a8f00;
     background: transparent;
 }
 
-.category .entry-header h1 a:hover, .tag .entry-header h1 a:hover {
+.category .entry-header h1 a:hover, .tag .entry-header h1 a:hover, .search .entry-header h1 a:hover {
     color: #98CD00;
 }
 
-.category .entry-meta, .tag .entry-meta {
+.category .entry-meta, .tag .entry-meta, .search .entry-meta {
     font-size: 0.7em;
 }
 
