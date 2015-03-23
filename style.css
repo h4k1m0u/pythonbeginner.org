@@ -54,6 +54,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 16.0 Category & Tag
 17.0 Single
+18.0 Front Page
 
 
 /*--------------------------------------------------------------
@@ -888,6 +889,10 @@ a:active {
 	display: block;
 }
 
+.comments-link {
+    float: right;
+}
+
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
@@ -1082,4 +1087,32 @@ object {
 
 .single .nav-links .nav-next a:after {
     content: " >>";
+}
+
+/*--------------------------------------------------------------
+18.0 Front Page
+--------------------------------------------------------------*/
+.home .entry-header > h1 {
+    margin-top: 1em;
+}
+
+.home article {
+    border-bottom: 1px solid #4F5145;
+}
+
+.home .entry-header h1 {
+    font-size: 1.2em;
+}
+
+.home .entry-header h1 a {
+    color: #6a8f00;
+    background: transparent;
+}
+
+.home .entry-header h1 a:hover {
+    color: #98CD00;
+}
+
+.home .entry-meta {
+    font-size: 0.7em;
 }
