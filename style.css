@@ -38,6 +38,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	10.1 Posts and pages
 	10.2 Asides
 	10.3 Comments
+        10.3.1 Disqus Comments
 11.0 Infinite scroll
 12.0 Media
 	12.1 Captions
@@ -106,6 +107,10 @@ progress,
 video {
 	display: inline-block;
 	vertical-align: baseline;
+}
+
+time {
+    color: #fff;
 }
 
 audio:not([controls]) {
@@ -899,6 +904,16 @@ a:active {
 
 .comments-link {
     float: right;
+}
+
+/*--------------------------------------------------------------
+10.3.1 Disqus Comments
+--------------------------------------------------------------*/
+#disqus_thread {
+    padding: 1em;
+    background: #1A1A16;
+    border: 1px solid #4F5145;
+    border-radius: 5px;
 }
 
 /*--------------------------------------------------------------
