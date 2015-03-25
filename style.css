@@ -911,8 +911,8 @@ a:active {
 --------------------------------------------------------------*/
 #disqus_thread {
     padding: 1em;
-    background: #1A1A16;
-    border: 1px solid #4F5145;
+    background: #4F5145;
+    border: 1px solid #fff;
     border-radius: 5px;
 }
 
