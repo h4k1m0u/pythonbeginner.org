@@ -1,6 +1,6 @@
 <?php
 /**
- * @package freebsdbeginner
+ * @package pythonbeginner
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php freebsdbeginner_posted_on(); ?>
+			<?php pythonbeginner_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -19,20 +19,20 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'freebsdbeginner' ),
+				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'pythonbeginner' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'freebsdbeginner' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'pythonbeginner' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php freebsdbeginner_entry_footer(); ?>
+		<?php pythonbeginner_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package freebsdbeginner
+ * @package pythonbeginner
  */
 ?>
 
@@ -14,7 +14,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php freebsdbeginner_posted_on(); ?>
+			<?php pythonbeginner_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -25,6 +25,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php freebsdbeginner_entry_footer(); ?>
+		<?php pythonbeginner_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

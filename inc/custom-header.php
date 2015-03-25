@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package freebsdbeginner
+ * @package pythonbeginner
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses freebsdbeginner_header_style()
- * @uses freebsdbeginner_admin_header_style()
- * @uses freebsdbeginner_admin_header_image()
+ * @uses pythonbeginner_header_style()
+ * @uses pythonbeginner_admin_header_style()
+ * @uses pythonbeginner_admin_header_image()
  */
-function freebsdbeginner_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'freebsdbeginner_custom_header_args', array(
+function pythonbeginner_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'pythonbeginner_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'freebsdbeginner_header_style',
-		'admin-head-callback'    => 'freebsdbeginner_admin_header_style',
-		'admin-preview-callback' => 'freebsdbeginner_admin_header_image',
+		'wp-head-callback'       => 'pythonbeginner_header_style',
+		'admin-head-callback'    => 'pythonbeginner_admin_header_style',
+		'admin-preview-callback' => 'pythonbeginner_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'freebsdbeginner_custom_header_setup' );
+add_action( 'after_setup_theme', 'pythonbeginner_custom_header_setup' );
 
-if ( ! function_exists( 'freebsdbeginner_header_style' ) ) :
+if ( ! function_exists( 'pythonbeginner_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see freebsdbeginner_custom_header_setup().
+ * @see pythonbeginner_custom_header_setup().
  */
-function freebsdbeginner_header_style() {
+function pythonbeginner_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function freebsdbeginner_header_style() {
 	</style>
 	<?php
 }
-endif; // freebsdbeginner_header_style
+endif; // pythonbeginner_header_style
 
-if ( ! function_exists( 'freebsdbeginner_admin_header_style' ) ) :
+if ( ! function_exists( 'pythonbeginner_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see freebsdbeginner_custom_header_setup().
+ * @see pythonbeginner_custom_header_setup().
  */
-function freebsdbeginner_admin_header_style() {
+function pythonbeginner_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function freebsdbeginner_admin_header_style() {
 	</style>
 <?php
 }
-endif; // freebsdbeginner_admin_header_style
+endif; // pythonbeginner_admin_header_style
 
-if ( ! function_exists( 'freebsdbeginner_admin_header_image' ) ) :
+if ( ! function_exists( 'pythonbeginner_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see freebsdbeginner_custom_header_setup().
+ * @see pythonbeginner_custom_header_setup().
  */
-function freebsdbeginner_admin_header_image() {
+function pythonbeginner_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function freebsdbeginner_admin_header_image() {
 	</div>
 <?php
 }
-endif; // freebsdbeginner_admin_header_image
+endif; // pythonbeginner_admin_header_image

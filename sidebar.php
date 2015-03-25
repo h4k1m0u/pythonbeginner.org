@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package freebsdbeginner
+ * @package pythonbeginner
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

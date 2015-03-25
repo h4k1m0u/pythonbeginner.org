@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package freebsdbeginner
+ * @package pythonbeginner
  */
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :
@@ -20,15 +20,15 @@ function the_posts_navigation() {
 	}
 	?>
 	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'freebsdbeginner' ); ?></h2>
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'pythonbeginner' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'freebsdbeginner' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'pythonbeginner' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'freebsdbeginner' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'pythonbeginner' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -37,14 +37,14 @@ function the_posts_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'freebsdbeginner_post_navigation' ) ) :
+if ( ! function_exists( 'pythonbeginner_post_navigation' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  * @author h4k1m
  */
-function freebsdbeginner_post_navigation() {
+function pythonbeginner_post_navigation() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -55,7 +55,7 @@ function freebsdbeginner_post_navigation() {
 	?>
     <hr/>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'freebsdbeginner' ); ?></h2>
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'pythonbeginner' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
@@ -67,11 +67,11 @@ function freebsdbeginner_post_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'freebsdbeginner_posted_on' ) ) :
+if ( ! function_exists( 'pythonbeginner_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function freebsdbeginner_posted_on() {
+function pythonbeginner_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -85,13 +85,13 @@ function freebsdbeginner_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'freebsdbeginner' ),
+		_x( 'Posted on %s', 'post date', 'pythonbeginner' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
     // h4k1m: hide author link
 	/*$byline = sprintf(
-		_x( 'by %s', 'post author', 'freebsdbeginner' ),
+		_x( 'by %s', 'post author', 'pythonbeginner' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
     );*/
 
@@ -100,34 +100,34 @@ function freebsdbeginner_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'freebsdbeginner_entry_footer' ) ) :
+if ( ! function_exists( 'pythonbeginner_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function freebsdbeginner_entry_footer() {
+function pythonbeginner_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'freebsdbeginner' ) );
-		if ( $categories_list && freebsdbeginner_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'freebsdbeginner' ) . '</span>', $categories_list );
+		$categories_list = get_the_category_list( __( ', ', 'pythonbeginner' ) );
+		if ( $categories_list && pythonbeginner_categorized_blog() ) {
+			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'pythonbeginner' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'freebsdbeginner' ) );
+		$tags_list = get_the_tag_list( '', __( ', ', 'pythonbeginner' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'freebsdbeginner' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'pythonbeginner' ) . '</span>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'freebsdbeginner' ), __( '1 Comment', 'freebsdbeginner' ), __( '% Comments', 'freebsdbeginner' ) );
+		comments_popup_link( __( 'Leave a comment', 'pythonbeginner' ), __( '1 Comment', 'pythonbeginner' ), __( '% Comments', 'pythonbeginner' ) );
 		echo '</span>';
 	}
 
     // h4k1m: hide edit post link
-	// edit_post_link( __( 'Edit', 'freebsdbeginner' ), '<span class="edit-link">', '</span>' );
+	// edit_post_link( __( 'Edit', 'pythonbeginner' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
@@ -144,45 +144,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'freebsdbeginner' ), single_cat_title( '', false ) );
+		$title = sprintf( __( 'Category: %s', 'pythonbeginner' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag: %s', 'freebsdbeginner' ), single_tag_title( '', false ) );
+		$title = sprintf( __( 'Tag: %s', 'pythonbeginner' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', 'freebsdbeginner' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( __( 'Author: %s', 'pythonbeginner' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', 'freebsdbeginner' ), get_the_date( _x( 'Y', 'yearly archives date format', 'freebsdbeginner' ) ) );
+		$title = sprintf( __( 'Year: %s', 'pythonbeginner' ), get_the_date( _x( 'Y', 'yearly archives date format', 'pythonbeginner' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', 'freebsdbeginner' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'freebsdbeginner' ) ) );
+		$title = sprintf( __( 'Month: %s', 'pythonbeginner' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'pythonbeginner' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', 'freebsdbeginner' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'freebsdbeginner' ) ) );
+		$title = sprintf( __( 'Day: %s', 'pythonbeginner' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'pythonbeginner' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Asides', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = _x( 'Galleries', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Galleries', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = _x( 'Images', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Images', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = _x( 'Videos', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Videos', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = _x( 'Quotes', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Quotes', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = _x( 'Links', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Links', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = _x( 'Statuses', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Statuses', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = _x( 'Audio', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Audio', 'post format archive title', 'pythonbeginner' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = _x( 'Chats', 'post format archive title', 'freebsdbeginner' );
+			$title = _x( 'Chats', 'post format archive title', 'pythonbeginner' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( 'Archives: %s', 'freebsdbeginner' ), post_type_archive_title( '', false ) );
+		$title = sprintf( __( 'Archives: %s', 'pythonbeginner' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( __( '%1$s: %2$s', 'freebsdbeginner' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( __( '%1$s: %2$s', 'pythonbeginner' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives', 'freebsdbeginner' );
+		$title = __( 'Archives', 'pythonbeginner' );
 	}
 
 	/**
@@ -230,8 +230,8 @@ endif;
  *
  * @return bool
  */
-function freebsdbeginner_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'freebsdbeginner_categories' ) ) ) {
+function pythonbeginner_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'pythonbeginner_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -244,27 +244,27 @@ function freebsdbeginner_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'freebsdbeginner_categories', $all_the_cool_cats );
+		set_transient( 'pythonbeginner_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so freebsdbeginner_categorized_blog should return true.
+		// This blog has more than 1 category so pythonbeginner_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so freebsdbeginner_categorized_blog should return false.
+		// This blog has only 1 category so pythonbeginner_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in freebsdbeginner_categorized_blog.
+ * Flush out the transients used in pythonbeginner_categorized_blog.
  */
-function freebsdbeginner_category_transient_flusher() {
+function pythonbeginner_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'freebsdbeginner_categories' );
+	delete_transient( 'pythonbeginner_categories' );
 }
-add_action( 'edit_category', 'freebsdbeginner_category_transient_flusher' );
-add_action( 'save_post',     'freebsdbeginner_category_transient_flusher' );
+add_action( 'edit_category', 'pythonbeginner_category_transient_flusher' );
+add_action( 'save_post',     'pythonbeginner_category_transient_flusher' );

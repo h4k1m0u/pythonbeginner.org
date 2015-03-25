@@ -1,6 +1,6 @@
 <?php
 /**
- * @package freebsdbeginner
+ * @package pythonbeginner
  */
 ?>
 
@@ -9,7 +9,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php freebsdbeginner_posted_on(); ?>
+			<?php pythonbeginner_posted_on(); ?>
 		</div><!-- .entry-meta -->
         <hr/>
 	</header><!-- .entry-header -->
@@ -18,13 +18,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'freebsdbeginner' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'pythonbeginner' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php freebsdbeginner_entry_footer(); ?>
+		<?php pythonbeginner_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

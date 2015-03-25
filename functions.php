@@ -1,8 +1,8 @@
 <?php
 /**
- * freebsdbeginner functions and definitions
+ * pythonbeginner functions and definitions
  *
- * @package freebsdbeginner
+ * @package pythonbeginner
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'freebsdbeginner_setup' ) ) :
+if ( ! function_exists( 'pythonbeginner_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'freebsdbeginner_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function freebsdbeginner_setup() {
+function pythonbeginner_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on freebsdbeginner, use a find and replace
-	 * to change 'freebsdbeginner' to the name of your theme in all the template files
+	 * If you're building a theme based on pythonbeginner, use a find and replace
+	 * to change 'pythonbeginner' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'freebsdbeginner', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'pythonbeginner', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,7 +50,7 @@ function freebsdbeginner_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'freebsdbeginner' ),
+		'primary' => __( 'Primary Menu', 'pythonbeginner' ),
 	) );
 
 	/*
@@ -70,22 +70,22 @@ function freebsdbeginner_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'freebsdbeginner_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'pythonbeginner_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // freebsdbeginner_setup
-add_action( 'after_setup_theme', 'freebsdbeginner_setup' );
+endif; // pythonbeginner_setup
+add_action( 'after_setup_theme', 'pythonbeginner_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function freebsdbeginner_widgets_init() {
+function pythonbeginner_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'freebsdbeginner' ),
+		'name'          => __( 'Sidebar', 'pythonbeginner' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -94,29 +94,29 @@ function freebsdbeginner_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'freebsdbeginner_widgets_init' );
+add_action( 'widgets_init', 'pythonbeginner_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function freebsdbeginner_scripts() {
-	wp_enqueue_style( 'freebsdbeginner-style', get_stylesheet_uri() );
+function pythonbeginner_scripts() {
+	wp_enqueue_style( 'pythonbeginner-style', get_stylesheet_uri() );
 
     // h4k1m: add layout css
-    wp_enqueue_style( 'freebsdbeginner-style-sidebar-content', get_template_directory_uri() . '/layouts/sidebar-content.css');
+    wp_enqueue_style( 'pythonbeginner-style-sidebar-content', get_template_directory_uri() . '/layouts/sidebar-content.css');
 
     // h4k1m: add fonts
-    wp_enqueue_style( 'freebsdbeginner-google-fonts', 'http://fonts.googleapis.com/css?family=Inconsolata:400,700|Droid+Sans+Mono');
+    wp_enqueue_style( 'pythonbeginner-google-fonts', 'http://fonts.googleapis.com/css?family=Inconsolata:400,700|Droid+Sans+Mono');
 
-	wp_enqueue_script( 'freebsdbeginner-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'pythonbeginner-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'freebsdbeginner-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'pythonbeginner-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'freebsdbeginner_scripts' );
+add_action( 'wp_enqueue_scripts', 'pythonbeginner_scripts' );
 
 /**
  * Implement the Custom Header feature.
