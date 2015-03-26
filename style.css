@@ -686,6 +686,10 @@ a:active {
     color: #fff;
 }
 
+.main-navigation .menu-item-home.current-menu-item > a {
+    color: #BDFF01;
+}
+
 /* Small menu. */
 .menu-toggle {
 	display: none;
@@ -873,6 +877,12 @@ a:active {
 
 .entry-content p:before {
     content: "- ";
+}
+
+.attachment-post-thumbnail {
+    display: block;
+    margin: 1.5em auto;
+    border: 1px solid #4f5145;
 }
 
 .page-links {
