@@ -17,11 +17,11 @@
 			<?php pythonbeginner_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+        <hr/>
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php the_content('Read more...');
-		?>
+        <?php the_post_thumbnail(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
