@@ -57,3 +57,18 @@ Same installation as `Apache` and `PHP`:
 -- Open `/etc/rc.conf` and add the following to start `MySQL` service on boot:
 
     mysql_enable="YES"
+
+## Install PhpMyAdmin:
+
+    pkg install phpmyadmin
+
+-- Add `PhpMyAdmin` alias to `/usr/local/etc/apache24/httpd.conf` between `<IfModule alias_module>...</IfModule>` tags:
+
+    Alias /phpmyadmin "/usr/local/www/phpMyAdmin/"
+
+    <Directory "/usr/local/www/phpMyAdmin/">
+        AllowOverride All
+        Require local
+    </Directory>
+
+You should now be able to access `PhpMyAdmin` in your browser at `localhost/phpmyadmin`, with your `MySQL` credentials.
