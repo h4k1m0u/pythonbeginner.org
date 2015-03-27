@@ -875,10 +875,6 @@ a:active {
 	margin: 1.5em 0 0;
 }
 
-.entry-content p:before {
-    content: "- ";
-}
-
 .attachment-post-thumbnail {
     display: block;
     margin: 1.5em auto;
@@ -888,6 +884,14 @@ a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-header {
+    border-bottom: 1px dashed #4f5145;
+}
+
+.entry-footer {
+    clear: both;
 }
 
 /*--------------------------------------------------------------
@@ -1084,7 +1088,7 @@ object {
 }
 
 .category article, .tag article, .search article {
-    border-bottom: 1px solid #4F5145;
+    border-bottom: 2px solid #4F5145;
 }
 
 .category .entry-header h1, .tag .entry-header h1, .search .entry-header h1 {
@@ -1102,6 +1106,11 @@ object {
 
 .category .entry-meta, .tag .entry-meta, .search .entry-meta {
     font-size: 0.7em;
+}
+
+.category .attachment-post-thumbnail, .tag .attachment-post-thumbnail, .search .attachment-post-thumbnail {
+    float:left;
+    margin-right: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -1131,7 +1140,7 @@ object {
 }
 
 .home article {
-    border-bottom: 1px solid #4F5145;
+    border-bottom: 2px solid #4F5145;
 }
 
 .home .entry-header h1 {
@@ -1149,4 +1158,9 @@ object {
 
 .home .entry-meta {
     font-size: 0.7em;
+}
+
+.home .attachment-post-thumbnail {
+    float:left;
+    margin-right: 1em;
 }

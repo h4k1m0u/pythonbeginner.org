@@ -13,11 +13,11 @@
 			<?php pythonbeginner_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
-        <hr/>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
         <?php the_post_thumbnail(); ?>
+        <?php the_content(); ?>
 
 		<?php
 			wp_link_pages( array(
