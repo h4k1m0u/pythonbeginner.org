@@ -875,6 +875,11 @@ a:active {
 	margin: 1.5em 0 0;
 }
 
+.entry-content ul {
+    list-style: outside;
+    padding-left: 2em;
+}
+
 .attachment-post-thumbnail {
     display: block;
     margin: 1.5em auto;
@@ -1102,6 +1107,10 @@ object {
 
 .category .entry-header h1 a:hover, .tag .entry-header h1 a:hover, .search .entry-header h1 a:hover {
     color: #98CD00;
+}
+
+.category .entry-content h2, .tag .entry-content h2, .search .entry-summary h2 {
+    display: inline;
 }
 
 .category .entry-meta, .tag .entry-meta, .search .entry-meta {
