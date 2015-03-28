@@ -872,6 +872,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
+    overflow: hidden;
 	margin: 1.5em 0 0;
 }
 
@@ -897,6 +898,11 @@ a:active {
 
 .entry-footer {
     clear: both;
+    margin-top: 1em;
+}
+
+.more-link {
+    float: right;
 }
 
 /*--------------------------------------------------------------
@@ -1163,6 +1169,10 @@ object {
 
 .home .entry-header h1 a:hover {
     color: #98CD00;
+}
+
+.home .entry-content h2 {
+    display: inline;
 }
 
 .home .entry-meta {
