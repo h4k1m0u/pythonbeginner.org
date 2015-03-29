@@ -881,7 +881,7 @@ a:active {
     padding-left: 2em;
 }
 
-.attachment-post-thumbnail {
+.attachment-post-thumbnail, .post-image {
     display: block;
     margin: 1.5em auto;
     border: 1px solid #4f5145;
