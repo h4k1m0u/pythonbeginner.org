@@ -581,9 +581,6 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-    overflow: hidden;
-	clear: both;
-	display: block;
     background: #1a1a16;
     border-bottom: 1px solid #4f5145;
     border-top: 1px solid #4f5145;
@@ -595,23 +592,53 @@ a:active {
 	padding-left: 0;
 }
 
-.main-navigation li {
+.nav-menu:after {
+    content: "";    
+    display: block;
+    clear: both;
+}
+
+.nav-menu > li {
 	float: left;
 	position: relative;
     line-height: 3em;
 }
 
-.main-navigation li:last-child {
+.nav-menu > li:last-child {
     float: right;
 }
 
-.main-navigation li:last-child > a {
+.nav-menu > li:last-child > a {
     background: #4f5145;
     color: #1A1A16;
     font-size: 1em;
 }
 
-.main-navigation li:last-child > a:hover {
+.nav-menu > li:last-child > a:before {
+    content: '\f09b';
+    vertical-align: top;
+    font-family: 'Fontawesome';
+    font-size: 32px;
+
+}
+
+.nav-menu > li:last-child > a span {
+    display: none;
+}
+
+.nav-menu > li:first-child > a {
+    width: 300px;
+    text-align: center;
+    font-size: 2em;
+    color: #6a8f00;
+    background: #98cd00;
+}
+
+.nav-menu > li:first-child > a:hover {
+    color: #bdff01;
+}
+
+.nav-menu > li:last-child > a:hover {
     color: #fff;
 }
 
@@ -622,60 +649,28 @@ a:active {
     font-size: 1.2em;
 }
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+.sub-menu {
 	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 48px;
 	left: -999em;
 	z-index: 99999;
+    width: 200px;
+    font-size: 0.8em;
+    border: 2px solid #4f5145;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+.sub-menu > li > a {
+    background: #fff;
 }
 
-.main-navigation ul ul a {
-	width: 200px;
+.sub-menu > li > a:hover {
+    color: #1A1A16;
 }
 
-.main-navigation ul ul li {
-}
-
-.main-navigation li:hover {
-}
-
-.main-navigation li:hover > a {
-}
-
-.main-navigation li:first-child {
-}
-
-.main-navigation li:first-child > a {
-    width: 300px;
-    text-align: center;
-    font-size: 2em;
-    color: #6a8f00;
-    background: #98cd00;
-}
-
-.main-navigation li:first-child > a:hover {
-    color: #bdff01;
-}
-
-.main-navigation ul ul :hover > a {
-}
-
-.main-navigation ul ul a:hover {
-}
-
-.main-navigation ul li:hover > ul {
+.nav-menu > li:hover > .sub-menu {
 	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul {
-	left: 100%;
 }
 
 .main-navigation .current_page_item > a,

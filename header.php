@@ -30,7 +30,9 @@
                 <button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'pythonbeginner' ); ?></button>
                 <?php
                     wp_nav_menu(array(
-                        'theme_location' => 'primary',
+                        'theme_location'    => 'primary',
+                        'link_before'       => '<span>',
+                        'link_after'        => '</span>'
                     ));
                 ?>
             </nav><!-- #site-navigation -->

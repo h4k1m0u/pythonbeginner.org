@@ -107,6 +107,7 @@ function pythonbeginner_scripts() {
 
     // h4k1m: add fonts
     wp_enqueue_style( 'pythonbeginner-google-fonts', 'http://fonts.googleapis.com/css?family=Inconsolata:400,700|Droid+Sans+Mono');
+    wp_enqueue_style( 'pythonbeginner-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 	wp_enqueue_script( 'pythonbeginner-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
