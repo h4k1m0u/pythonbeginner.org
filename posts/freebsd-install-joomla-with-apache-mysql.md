@@ -55,6 +55,10 @@ It means that you have to install basic `PHP` modules (session, xml...), those m
     pkg install php56-extensions
     
 
--- If you go to `joomla.loc` on your browser, you could start the `Joomla` installation process. You won't have to create a `MySQL` database in `PhpMyAdmin`, you just need to provide `Joomla` with your `MySQL` credentials and it will create a database for you.
+-- If you restart `apache` with:
+
+    service apache24 restart
+
+And go to `joomla.loc` on your browser, you could start the `Joomla` installation process. You won't have to create a `MySQL` database in `PhpMyAdmin`, you just need to provide `Joomla` with your `MySQL` credentials and it will create a database for you.
 
 <img class="post-image" src="/wp-content/uploads/2015/03/freebsd-install-joomla-with-apache-mysql-result.png" title="Freebsd - Finished Joomla Installation" />
