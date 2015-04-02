@@ -54,9 +54,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 14.0 Content
 15.0 Footer
 
-16.0 Category & Tag & Search
+16.0 Category & Tag & Search & Front
 17.0 Single
-18.0 Front Page
 
 
 /*--------------------------------------------------------------
@@ -1090,41 +1089,41 @@ object {
 }
 
 /*--------------------------------------------------------------
-16.0 Category & Tag & Search
+16.0 Category & Tag & Search & Front
 --------------------------------------------------------------*/
-.category .page-header > h1, .tag .page-header > h1, .search .page-header > h1 {
+.category .page-header > h1, .tag .page-header > h1, .search .page-header > h1, .home .entry-header > h1 {
     margin: 1em 0;
     text-decoration: underline;
     font-weight: bold;
 }
 
-.category article, .tag article, .search article {
+.category article, .tag article, .search article, .home article {
     border-bottom: 2px solid #4F5145;
 }
 
-.category .entry-header h1, .tag .entry-header h1, .search .entry-header h1 {
+.category .entry-header h1, .tag .entry-header h1, .search .entry-header h1, .home .entry-header h1 {
     font-size: 1.3em;
 }
 
-.category .entry-header h1 a, .tag .entry-header h1 a, .search .entry-header h1 a {
+.category .entry-header h1 a, .tag .entry-header h1 a, .search .entry-header h1 a, .home .entry-header h1 a {
     color: #6a8f00;
     background: transparent;
 }
 
-.category .entry-header h1 a:hover, .tag .entry-header h1 a:hover, .search .entry-header h1 a:hover {
+.category .entry-header h1 a:hover, .tag .entry-header h1 a:hover, .search .entry-header h1 a:hover, .home .entry-header h1 a:hover {
     color: #98CD00;
 }
 
-.category .entry-content h2, .tag .entry-content h2, .search .entry-summary h2 {
+.category .entry-content h2, .tag .entry-content h2, .search .entry-summary h2, .home .entry-content h2 {
     display: inline;
     font-size: 1em;
 }
 
-.category .entry-meta, .tag .entry-meta, .search .entry-meta {
+.category .entry-meta, .tag .entry-meta, .search .entry-meta, .home .entry-meta {
     font-size: 0.7em;
 }
 
-.category .attachment-post-thumbnail, .tag .attachment-post-thumbnail, .search .attachment-post-thumbnail {
+.category .attachment-post-thumbnail, .tag .attachment-post-thumbnail, .search .attachment-post-thumbnail, .home .attachment-post-thumbnail {
     float:left;
     margin-right: 1em;
 }
@@ -1146,42 +1145,4 @@ object {
 
 .single .nav-links .nav-next a:after {
     content: " >>";
-}
-
-/*--------------------------------------------------------------
-18.0 Front Page
---------------------------------------------------------------*/
-.home .entry-header > h1 {
-    margin-top: 1em;
-}
-
-.home article {
-    border-bottom: 2px solid #4F5145;
-}
-
-.home .entry-header h1 {
-    font-size: 1.3em;
-}
-
-.home .entry-header h1 a {
-    color: #6a8f00;
-    background: transparent;
-}
-
-.home .entry-header h1 a:hover {
-    color: #98CD00;
-}
-
-.home .entry-content h2 {
-    display: inline;
-    font-size: 1em;
-}
-
-.home .entry-meta {
-    font-size: 0.7em;
-}
-
-.home .attachment-post-thumbnail {
-    float:left;
-    margin-right: 1em;
 }
