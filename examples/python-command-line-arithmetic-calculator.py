@@ -6,9 +6,15 @@ if len(sys.argv) < 4:
     print 'Incorrect number of arguments: Expecting 3 arguments, %d given.' % (len(sys.argv) - 1)
     exit()
 else:
-    operand1 = float(sys.argv[1])
+    # operands have to be numbers
+    try:
+        operand1 = float(sys.argv[1])
+        operand2 = float(sys.argv[3])
+    except ValueError, e:
+        print e
+        exit()
+
     operator = sys.argv[2]
-    operand2 = float(sys.argv[3])
 
 # calculate the result according to the operator
 if operator == '+':
