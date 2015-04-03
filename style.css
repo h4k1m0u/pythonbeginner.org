@@ -665,6 +665,8 @@ a:active {
     background: #fff;
 }
 
+.sub-menu > li > a:focus,
+.sub-menu > li > a:active,
 .sub-menu > li > a:hover {
     color: #1A1A16;
 }
