@@ -1,3 +1,7 @@
+`Pillow` (`PIL` fork) is installed with:
+
+    pip install Pillow
+
 -- We will need the `random` built-in python module, and the `Image`, `ImageDraw` and `ImageColor` classes from the `Pillow` library:
 
     import random

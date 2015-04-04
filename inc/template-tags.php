@@ -86,7 +86,7 @@ function pythonbeginner_posted_on() {
 
 	$posted_on = sprintf(
 		_x( 'Posted on %s', 'post date', 'pythonbeginner' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		$time_string
 	);
 
     // h4k1m: hide author link
