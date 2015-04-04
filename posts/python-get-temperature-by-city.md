@@ -1,5 +1,13 @@
 We are going to use `weather` data retrieved from <a href="" target="_blank">OpenWeatherMap</a> in `json` format.
 
+<!--more-->
+
+The following built-in modules will be needed:
+
+*   **sys**: To get command line arguments.
+*   **urllib2**: To download a webpage content by `url`.
+*   **json**: To convert a `json` object to a `dictionary`.
+
 -- First, we verify that a `city` has been provided as a command line argument. The script is exited if no `city` is given, otherwise we will save the `city` name in a variable:
 
     if len(sys.argv) > 1:
