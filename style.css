@@ -691,7 +691,7 @@ a:active {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
@@ -700,6 +700,12 @@ a:active {
 	.main-navigation ul {
 		display: none;
 	}
+
+    .nav-menu > li,
+    .nav-menu > li:first-child > a {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .site-main .comment-navigation,
@@ -1135,11 +1141,6 @@ object {
 
 .category .entry-meta, .tag .entry-meta, .search .entry-meta, .home .entry-meta {
     font-size: 0.7em;
-}
-
-.category .attachment-post-thumbnail, .tag .attachment-post-thumbnail, .search .attachment-post-thumbnail, .home .attachment-post-thumbnail {
-    float:left;
-    margin-right: 1em;
 }
 
 /*--------------------------------------------------------------

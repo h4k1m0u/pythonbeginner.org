@@ -4,7 +4,7 @@ Layout: Sidebar-Content
 */
 
 #page {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     color: #4F5145;
     background: #272822;
@@ -26,4 +26,15 @@ Layout: Sidebar-Content
     width: 300px;
     height: 100%;
     padding: 0.5em;
+}
+
+/* Tablets */
+@media screen and (max-width: 800px) {
+    .site-content {
+        padding: 0;
+    }
+
+    .site-content .widget-area {
+        display: none;
+    }
 }
