@@ -1,4 +1,6 @@
-`Pygame` is a set of `Python` modules based on the `SDL` library and designed for writing video games
+`Pygame` is a set of `Python` modules based on the `SDL` library and designed for writing video games. It is installed on `Freebsd` with (See <a href="http://www.pygame.org/download.shtml" target="_blank">Pygame installation</a>:
+
+    pkg install py27-game-1.9.1_6
 
 In this tutorial, we will code a simple bounce program to get started with `Pygame`. The `sprite` used moves diagonally and bounces when it collides with window's boundaries.
 
