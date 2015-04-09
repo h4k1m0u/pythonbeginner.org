@@ -834,6 +834,23 @@ a:active {
 	display: none;
 }
 
+/* Recent posts widget. */
+.widget_recent_entries li {
+    font-size: 0.75em;
+}
+
+.widget_recent_entries li:before {
+    content: "-";
+}
+
+.widget_recent_entries .post-date {
+    color: #fff;
+}
+
+.widget_recent_entries .post-date:before {
+    content: "on ";
+}
+
 /*--------------------------------------------------------------
 9.1 Search Form
 --------------------------------------------------------------*/
