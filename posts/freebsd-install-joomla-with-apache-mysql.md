@@ -43,6 +43,11 @@ See <a href="/freebsd-install-apache-mysql-php-phpmyadmin" target="_blank">Insta
         </Directory>
     <VirtualHost *:80>
     
+## Configure PHP:
+
+-- Don't forget to check that `/usr/local/etc/php.ini` exits, otherwise you have to copy it either from `/usr/local/etc/php.ini-development` or `/usr/local/etc/php.ini-production`:
+
+    cp /usr/local/etc/php.ini-production /usr/local/etc/php.ini
 
 -- Open `joomla.loc` on your browser. If you encounter an error related to `sessions` or `xml` (and you will):
 

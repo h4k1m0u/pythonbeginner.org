@@ -87,6 +87,11 @@ To make this configuration, open `/usr/local/etc/php-fpm.conf`:
     listen.group = www
     listen.mode = 0660
 
+-- Don't forget to check that `/usr/local/etc/php.ini` exits, otherwise you have to copy it either from `/usr/local/etc/php.ini-development` or `/usr/local/etc/php.ini-production`:
+
+    cp /usr/local/etc/php.ini-production /usr/local/etc/php.ini
+
+
 -- If you go to `wordpress.loc` on your browser, you could start the `Wordpress` installation process. You will need to create a database for `Wordpress`.
 
 In case, a `wordpress` plugin you installed require php's xml, json... functions, these could be available in `php56-extensions` which is installed with:
